@@ -1,0 +1,11 @@
+Prompts of all the samples
+
+baseline_electronic.wav: 	'A cyberpunk-inspired beat with dark synth bass and glitchy effects'
+baseline_folk.wav: 		'An autumn folk dance with lively fiddle and acoustic guitar'
+baseline_rock.wav: 		'A classic rock instrumental with driving guitars and punchy drums'
+baseline_soundtrack.wav: 	'A fast-action movie soundtrack with driving strings and heavy percussion'
+
+ours_drumkit.wav: 		'A glitch-hop track with fast percussive elements and chopped synths'
+ours_funk.wav: 			'A groovy jazz-funk jam with slap bass and funky keyboard stabs'
+ours_percussive.wav: 		'A hyperpop instrumental with extreme tempo shifts and synth layers'
+ours_rock.wav: 			'A classic rock instrumental with driving guitars and punchy drums'

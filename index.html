@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>LOOPGEN</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet"/>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Simple JavaScript for Tab Switching -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const tabButtons = document.querySelectorAll(".tab-link");
+      const allTabContents = document.querySelectorAll(".tab-content");
+
+      tabButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          // Remove "current" from all tab buttons
+          tabButtons.forEach(btn => btn.classList.remove("current"));
+          // Hide all tab contents
+          allTabContents.forEach(tab => tab.classList.remove("current"));
+
+          // Add "current" to the clicked button
+          button.classList.add("current");
+          // Show the corresponding tab content
+          const tabId = button.getAttribute("data-tab");
+          document.getElementById(tabId).classList.add("current");
+        });
+      });
+    });
+  </script>
+  
+</head>
+
+<body>
+  <div class="gradio-container">
+    <!-- Header and description -->
+    <h1>LoopGen</h1>
+    <div class="centered-text">
+      Listen to audio samples from LoopGen, our <i>Loop-Generation Algorithm</i>.<br>
+      All generated samples are straight from the model, with no post-processing.<br>
+      All loops are repeated twice: pay attention to the seam in the middle.<br>
+      Read the <a href="https://arxiv.org/abs/yourpaperid" target="_blank">arXiv</a>.
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs-container">
+      <ul class="tab-container">
+        <li class="tab-link current" data-tab="loopgen-tab">LoopGen</li> 
+        <li class="tab-link" data-tab="baseline-tab">Baseline</li>
+      </ul>
+
+      <!-- Loopgen tab content -->
+      <div id="loopgen-tab" class="tab-content current">
+        <div class="audio-section">
+          <!-- Sample 1 -->
+          <div class="sample-title">Sample 1</div>
+          <div class="sample-row">
+            <div class="description-box">
+              A glitch-hop track with fast percussive elements and chopped synths
+            </div>
+            <div class="audio-box">
+              <audio controls>
+                <source src="audio/loopgen/sample1/sample.wav" type="audio/wav"/>
+              </audio>
+            </div>
+          </div>
+
+          <!-- Sample 2 -->
+          <div class="sample-title">Sample 2</div>
+          <div class="sample-row">
+            <div class="description-box">
+              A groovy jazz-funk jam with slap bass and funky keyboard stabs
+            </div>
+            <div class="audio-box">
+              <audio controls>
+                <source src="audio/loopgen/sample2/sample.wav" type="audio/wav"/>
+              </audio>
+            </div>
+          </div>
+
+          <!-- Sample 3 -->
+          <div class="sample-title">Sample 3</div>
+          <div class="sample-row">
+            <div class="description-box">
+              A hyperpop instrumental with extreme tempo shifts and synth layers
+            </div>
+            <div class="audio-box">
+              <audio controls>
+                <source src="audio/loopgen/sample3/sample.wav" type="audio/wav"/>
+              </audio>
+            </div>
+          </div>
+
+          <!-- Sample 4 -->
+          <div class="sample-title">Sample 4</div>
+          <div class="sample-row">
+            <div class="description-box">
+              A classic rock instrumental with driving guitars and punchy drums
+            </div>
+            <div class="audio-box">
+              <audio controls>
+                <source src="audio/loopgen/sample4/sample.wav" type="audio/wav"/>
+              </audio>
+            </div>
+          </div>
+
+          <!-- Add more samples for Loopgen as needed -->
+        </div>
+      </div>
+
+      <!-- Baseline tab content -->
+      <div id="baseline-tab" class="tab-content">
+        <div class="audio-section">
+          <!-- Sample 1 -->
+          <div class="sample-title">Sample 1</div>
+          <div class="sample-row">
+            <div class="description-box">
+              A cyberpunk-inspired beat with dark synth bass and glitchy effects
+            </div>
+            <div class="audio-box">
+              <audio controls>
+                <source src="audio/baseline/sample1/sample.wav" type="audio/wav"/>
+              </audio>
+            </div>
+          </div>
+
+          <!-- Sample 2 -->
+          <div class="sample-title">Sample 2</div>
+          <div class="sample-row">
+            <div class="description-box">
+              An autumn folk dance with lively fiddle and acoustic guitar
+            </div>
+            <div class="audio-box">
+              <audio controls>
+                <source src="audio/baseline/sample2/sample.wav" type="audio/wav"/>
+              </audio>
+            </div>
+          </div>
+
+          <!-- Sample 3 -->
+          <div class="sample-title">Sample 3</div>
+          <div class="sample-row">
+            <div class="description-box">
+              A classic rock instrumental with driving guitars and punchy drums
+            </div>
+            <div class="audio-box">
+              <audio controls>
+                <source src="audio/baseline/sample3/sample.wav" type="audio/wav"/>
+              </audio>
+            </div>
+          </div>
+
+          <!-- Sample 4 -->
+          <div class="sample-title">Sample 4</div>
+          <div class="sample-row">
+            <div class="description-box">
+              A fast-action movie soundtrack with driving strings and heavy percussion
+            </div>
+            <div class="audio-box">
+              <audio controls>
+                <source src="audio/baseline/sample4/sample.wav" type="audio/wav"/>
+              </audio>
+            </div>
+          </div>
+
+          <!-- Add more samples for Baseline as needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
